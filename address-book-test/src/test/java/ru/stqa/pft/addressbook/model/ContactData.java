@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ru/stqa/pft/addressbook")
+@Table(name = "addressbook")
 public class ContactData {
    @XStreamOmitField
    @Id
