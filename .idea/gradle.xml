@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Sandbox" />
             <option value="$PROJECT_DIR$/address-book-test" />
+            <option value="$PROJECT_DIR$/mantis-tests" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

@@ -1,3 +1,4 @@
 include 'Sandbox'
 include 'address-book-test'
+include 'mantis-tests'
 

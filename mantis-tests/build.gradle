@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.1.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
+    implementation 'com.beust:jcommander:1.78'
+    implementation 'com.thoughtworks.xstream:xstream:1.4.11.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    // testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    // testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.5'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.10.Final'
+    compile 'ch.qos.logback:logback-classic:1.1.5'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
+
+}
+
+test {
+    useTestNG {
+        suites 'src/test/resources/testng-groups.xml'
+    }
+    if (project.hasProperty(('browser'))) {
+        systemProperty 'browser', "${browser}"
+    }
+    if (project.hasProperty(('target'))) {
+        systemProperty 'target', "${target}"
+    }
+    if (project.hasProperty(('verifyUI'))) {
+        systemProperty 'verifyUI', "${verifyUI}"
+    }
+}
