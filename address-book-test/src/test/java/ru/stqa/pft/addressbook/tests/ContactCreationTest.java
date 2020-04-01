@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.tests;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import org.hamcrest.MatcherAssert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
@@ -14,6 +15,10 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTest extends TestBase {
     @DataProvider
@@ -34,7 +39,8 @@ public class ContactCreationTest extends TestBase {
     @Test(dataProvider = "validContactsFromJson")
     public void testCreateNewContact (ContactData contact) throws Exception {
         applicationManager.goTo().goToHome();
-        Contacts before = applicationManager.contact().all();
+        //  Contacts before = applicationManager.contact().all();
+        Contacts before = applicationManager.db().contacts();
         applicationManager.goTo().goToAddNewContact();
         // List<ContactData> before = applicationManager.contact().getContactList();
         //  Contacts before = applicationManager.contact().getContactList();
@@ -61,7 +67,11 @@ public class ContactCreationTest extends TestBase {
             }
         }*/
         //   contact.setId(max);
-        contact.setId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt());
+       // assertThat(after, equalTo(
+        //        before.withAdded(contact.setId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+
+        assertThat(after, equalTo(
+                before.withAdded(contact.setId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
         //    before.add(contact);
         //    Comparator<? super ContactData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
         //   before.sort(byId);
