@@ -129,6 +129,8 @@ public class ContactData {
        this.emailTwo = null;
    }
 
+
+
    public String getEmailOne() {
        return emailOne;
    }
@@ -234,8 +236,9 @@ public class ContactData {
         return result;
     }
 
-    public void setId (int id) {
+    public ContactData setId (int id) {
        this.id = id;
+       return this;
    }
 
 }

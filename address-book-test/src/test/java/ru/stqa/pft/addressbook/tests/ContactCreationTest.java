@@ -46,7 +46,7 @@ public class ContactCreationTest extends TestBase {
         //  Contacts before = applicationManager.contact().getContactList();
         // Set<ContactData> before = applicationManager.contact().all();
         //   Contacts before = applicationManager.contact().all();
-        // ContactData contact = new ContactData("Pavel111", "First", "Ivanov"
+        //ContactData contact = new ContactData("Pavel111", "First", "Ivanov"
         //         , "skynet", "Moscow 3-builder street 10", "111", "222",
         //         "333", "123@gmail.com", "ivanov@mail.com"  );
         //   int before = applicationManager.getContactHelper().getContactCount();   //Счетчик контактов до
@@ -67,11 +67,14 @@ public class ContactCreationTest extends TestBase {
             }
         }*/
         //   contact.setId(max);
-       // assertThat(after, equalTo(
+        // assertThat(after, equalTo(
         //        before.withAdded(contact.setId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
 
+    //    assertThat(after, equalTo(
+     //   before.withAdded(contact.setId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
         assertThat(after, equalTo(
                 before.withAdded(contact.setId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+      //  contact.setId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt());
         //    before.add(contact);
         //    Comparator<? super ContactData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
         //   before.sort(byId);
