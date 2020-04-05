@@ -17,7 +17,7 @@ public class TestBase {
 
 
 
-    protected static final ApplicationManager applicationManager
+    public static final ApplicationManager applicationManager
             = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
 
     @BeforeSuite()

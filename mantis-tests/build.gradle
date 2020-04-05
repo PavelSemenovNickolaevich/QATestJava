@@ -24,6 +24,7 @@ dependencies {
     implementation 'com.joyent.http-signature:apache-http-client-signature:4.1.1'
     implementation 'com.joyent.http-signature:java-http-signature:4.1.1'
     implementation 'org.subethamail:subethasmtp:3.1.7'
+    implementation 'ru.lanwen.verbalregex:java-verbal-expressions:1.6'
 
 }
 
