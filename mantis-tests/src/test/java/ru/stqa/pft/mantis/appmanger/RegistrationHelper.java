@@ -3,6 +3,8 @@ package ru.stqa.pft.mantis.appmanger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import javax.xml.transform.sax.SAXResult;
+
 import static ru.stqa.pft.mantis.tests.TestBase.applicationManager;
 
 public class RegistrationHelper extends HelperBase {
@@ -27,6 +29,16 @@ public class RegistrationHelper extends HelperBase {
         type(By.name("password"), password);
         type(By.name("password_confirm"), password);
         click(By.cssSelector("button"));
+    }
+
+    public void manageUser (String user) {
+        wd.get(applicationManager.getProperty("web.baseUrl") + "/manage_use_page.php");
+
+
+    }
+
+    public void resetPassword () {
+       click(By.cssSelector("input[value = 'Reset Password']"));
     }
 
 }

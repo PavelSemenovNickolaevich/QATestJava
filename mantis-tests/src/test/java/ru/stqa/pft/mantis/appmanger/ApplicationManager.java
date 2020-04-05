@@ -46,6 +46,7 @@ public class ApplicationManager {
         return registrationHelper;
     }
 
+
     public FtpHelper ftp () {
         if (ftp == null) {
             ftp = new FtpHelper(this);
