@@ -23,6 +23,7 @@ dependencies {
     implementation 'commons-net:commons-net:3.6'
     implementation 'com.joyent.http-signature:apache-http-client-signature:4.1.1'
     implementation 'com.joyent.http-signature:java-http-signature:4.1.1'
+    implementation 'org.subethamail:subethasmtp:3.1.7'
 
 }
 
