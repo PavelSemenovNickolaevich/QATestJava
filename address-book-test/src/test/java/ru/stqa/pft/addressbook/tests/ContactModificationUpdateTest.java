@@ -17,7 +17,7 @@ public class ContactModificationUpdateTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditionals () throws IOException {
-      //  applicationManager.goTo().goToHome();
+        //  applicationManager.goTo().goToHome();
         if (applicationManager.contact().all().size() == 0) {
             applicationManager.contact()
                     .createContact(new ContactData(properties.getProperty("web.firstname")
@@ -48,7 +48,7 @@ public class ContactModificationUpdateTest extends TestBase {
                 , properties.getProperty("web.phoneHome"), properties.getProperty("web.phoneMobile")
                 , properties.getProperty("web.phoneWork"), properties.getProperty("web.emailOne")
                 , properties.getProperty("web.emailTwo"));
-    //    applicationManager.goTo().goToAddNewContact();
+        //    applicationManager.goTo().goToAddNewContact();
         //   int before = applicationManager.getContactHelper().getContactCount();  //Счетчик контактов до
         // applicationManager.contact().modifyContact(contact, index);
         applicationManager.contact().modifyContactNew(contact);
@@ -64,7 +64,7 @@ public class ContactModificationUpdateTest extends TestBase {
         //  Assert.assertEquals(before, after);
         MatcherAssert.assertThat(after, CoreMatchers.equalTo((before.without(modifyContact).withAdded(contact))));
         //  Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
-       //   applicationManager.contact().logoutContact();
+        //   applicationManager.contact().logoutContact();
         verifyContactListUI();
     }
 

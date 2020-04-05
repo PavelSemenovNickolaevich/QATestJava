@@ -11,6 +11,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import ru.stqa.pft.mantis.appmanger.ApplicationManager;
 
+import java.io.File;
+
 public class TestBase {
 
 
@@ -21,10 +23,12 @@ public class TestBase {
     @BeforeSuite()
     public void setUp () throws Exception {
         applicationManager.init();
+        applicationManager.ftp().upload(new File("src/test/resources/config_inc.php"), "config_inc.php", "config_inc.php.bak");
     }
 
     @AfterSuite(alwaysRun = true)
     public void tearDown () throws Exception {
+        applicationManager.ftp().restore("config_inc.php.bak", "config_inc.php");
         applicationManager.stop();
     }
 
