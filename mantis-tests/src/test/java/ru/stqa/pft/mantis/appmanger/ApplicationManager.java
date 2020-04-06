@@ -21,9 +21,11 @@ public class ApplicationManager {
     private FtpHelper ftp;
     private MailHelper mailHelper;
     private JamesHelper jamesHelper;
+    private ChangePasswordHelper changePassword;
 
 
     public ApplicationManager (String browser) {
+
         this.browser = browser;
         properties = new Properties();
     }
@@ -89,5 +91,12 @@ public class ApplicationManager {
             jamesHelper = new JamesHelper(this);
         }
         return jamesHelper;
+    }
+
+    public ChangePasswordHelper changePassword() {
+        if (changePassword == null) {
+            changePassword = new ChangePasswordHelper(this);
+        }
+        return changePassword;
     }
 }

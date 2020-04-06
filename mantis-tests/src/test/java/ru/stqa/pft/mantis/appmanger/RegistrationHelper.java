@@ -31,14 +31,5 @@ public class RegistrationHelper extends HelperBase {
         click(By.cssSelector("button"));
     }
 
-    public void manageUser (String user) {
-        wd.get(applicationManager.getProperty("web.baseUrl") + "/manage_use_page.php");
-
-
-    }
-
-    public void resetPassword () {
-       click(By.cssSelector("input[value = 'Reset Password']"));
-    }
 
 }
