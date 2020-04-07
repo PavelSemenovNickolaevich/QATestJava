@@ -34,7 +34,7 @@ public class ContactPhoneAddressEmailTest extends TestBase {
 
     @Test
     public void testContactPhonesEmailAdress () {
-       // applicationManager.goTo().goToAddNewContact();
+        // applicationManager.goTo().goToAddNewContact();
         ContactData contact = applicationManager.contact().all().iterator().next();
         ContactData contactInfoFromEditForm = applicationManager.contact().infoFromEditForm(contact);
 
@@ -44,9 +44,11 @@ public class ContactPhoneAddressEmailTest extends TestBase {
         // assertThat(contact.getEmailOne(), CoreMatchers.equalTo(cleaned(contactInfoFromEditForm.getEmailOne())));
         //  assertThat(contact.getEmailTwo(), CoreMatchers.equalTo(cleaned(contactInfoFromEditForm.getEmailTwo())));
         //  assertThat(contact.getAdress(), CoreMatchers.equalTo(cleaned(contactInfoFromEditForm.getAdress())));
-  //      assertThat(contact.getAllEmails(), CoreMatchers.equalTo(mergeEmails(contactInfoFromEditForm)));
+        assertThat(contact.getAdress(), CoreMatchers.equalTo(mergeAdress(contactInfoFromEditForm)));
+        assertThat(contact.getAllEmails(), CoreMatchers.equalTo(mergeEmails(contactInfoFromEditForm)));
         assertThat(contact.getAllPhones(), CoreMatchers.equalTo(mergePnones(contactInfoFromEditForm)));
- //       assertThat(contact.getAdress(), CoreMatchers.equalTo(mergeAdress(contactInfoFromEditForm)));
+
+
 
     }
 
@@ -59,22 +61,28 @@ public class ContactPhoneAddressEmailTest extends TestBase {
 
     private String mergeEmails (ContactData contact) {
         return Arrays.asList(contact.getEmailOne(), contact.getEmailTwo())
-                .stream().filter((s) -> !s.equals(" "))
-                .map(ContactPhoneAddressEmailTest::cleaned)
+                .stream().filter((s) -> !s.equals(""))
+            //    .map(ContactPhoneAddressEmailTest::cleaned)
                 .collect(Collectors.joining("\n"));
     }
 
     private String mergeAdress (ContactData contact) {
         return Arrays.asList(contact.getAdress())
                 .stream().filter((s) -> !s.equals(""))
-                .map(ContactPhoneAddressEmailTest::cleaned)
+             //   .map(ContactPhoneAddressEmailTest::cleaned)
                 .collect(Collectors.joining("\n"));
 
     }
 
     public static String cleaned (String phone) {
         //очищение строчек
-        return phone.replaceAll("\\s", "").replaceAll("[-()]", "");
+        return phone.replaceAll("\\s", "").replaceAll("[-()]", "")
+                .replaceAll(" ", "");
+    }
+    public static String cleanedEmail (String email) {
+        //очищение строчек
+        return email.replaceAll("\\s", "").replaceAll("[-()]", "")
+                .replaceAll(" ", "");
     }
 
 }
