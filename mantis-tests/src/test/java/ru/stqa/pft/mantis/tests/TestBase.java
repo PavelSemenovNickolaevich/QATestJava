@@ -39,13 +39,13 @@ public class TestBase {
         applicationManager.stop();
     }
 
-     boolean isIssueOpen(int issuId) throws MalformedURLException, ServiceException, RemoteException {
+     boolean isIssueOpen(int issueId) throws MalformedURLException, ServiceException, RemoteException {
         MantisConnectPortType mc = applicationManager.soap().getMantisConnect();
-        IssueData issueData = mc.mc_issue_get("administrator", "root" , BigInteger.valueOf(issuId));
-        if (issueData.getResolution().getName().equals("fixed")) {
-            return true;
-        } else {
+        IssueData issueData = mc.mc_issue_get("administrator", "root" , BigInteger.valueOf(issueId));
+        if (issueData.getResolution().getName().equals("Fixed")) {
             return false;
+        } else {
+            return true;
         }
 
     }
