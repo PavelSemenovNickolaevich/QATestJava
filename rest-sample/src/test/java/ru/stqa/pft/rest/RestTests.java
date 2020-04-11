@@ -32,7 +32,7 @@ public class RestTests {
         //   return null;
         String json = getExecutor().execute(Request.Get("http://demo.bugify.com/api/issues.json"))
                 .returnContent().asString();
-        //      String jsom = Request.Get("http://demo.bugify.com/api/issues.json").execute().returnContent().asString();
+        //      String json = Request.Get("http://demo.bugify.com/api/issues.json").execute().returnContent().asString();
         JsonElement parsed = new JsonParser().parse(json);
         JsonElement issues = parsed.getAsJsonObject().get("issues");
         return new Gson().fromJson(issues, new TypeToken<Set<Issue>>() {
