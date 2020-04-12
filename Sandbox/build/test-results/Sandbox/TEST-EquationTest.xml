@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EquationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-12T17:54:00" hostname="LAPTOP-QKC3I26M" time="0.017">
+  <properties/>
+  <testcase name="test0" classname="EquationTest" time="0.012"/>
+  <testcase name="test1" classname="EquationTest" time="0.0"/>
+  <testcase name="test2" classname="EquationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
