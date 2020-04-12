@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
+
 import org.apache.http.client.fluent.Executor;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.message.BasicNameValuePair;
@@ -30,24 +31,24 @@ public class RestTests {
 
     private Set<Issue> getIssues () throws IOException {
         //   return null;
-        String json = getExecutor().execute(Request.Get("http://demo.bugify.com/api/issues.json"))
+        String json = getExecutor().execute(Request.Get("https://bugify.stqa.ru/api/issues.json?limit=500"))
                 .returnContent().asString();
         //      String json = Request.Get("http://demo.bugify.com/api/issues.json").execute().returnContent().asString();
-        JsonElement parsed = new JsonParser().parse(json);
+        JsonElement parsed =  JsonParser.parseString(json);
         JsonElement issues = parsed.getAsJsonObject().get("issues");
         return new Gson().fromJson(issues, new TypeToken<Set<Issue>>() {
         }.getType());
     }
 
     private Executor getExecutor () {
-        return Executor.newInstance().auth("LSGjeU4yP1X493ud1hNniA==", "");
+        return Executor.newInstance().auth("288f44776e7bec4bf44fdfeb1e646490", "");
     }
 
     private int createIssue (Issue newIssue) throws IOException {
-        String json = getExecutor().execute(Request.Post("http://demo.bugify.com/api/issues.json")
+        String json = getExecutor().execute(Request.Post("https://bugify.stqa.ru/api/issues.json?limit=500")
                 .bodyForm(new BasicNameValuePair("subject", newIssue.getSubject()),
                         new BasicNameValuePair("description", newIssue.getDescription()))).returnContent().asString();
-        JsonElement parsed = new JsonParser().parse(json);
+        JsonElement parsed = JsonParser.parseString(json);
         return  parsed.getAsJsonObject().get("issue_id").getAsInt();
     }
 

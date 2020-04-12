@@ -21,12 +21,12 @@ public class RestAssuredTests extends TestBase {
 
     @BeforeClass
     public  void init() {
-        RestAssured.authentication = RestAssured.basic(" 28accbe43ea112d9feb328d2c00b3eed", "");
+        RestAssured.authentication = RestAssured.basic("288f44776e7bec4bf44fdfeb1e646490", "");
     }
 
     @Test
     public void testCreateIssue () throws IOException {
-        skipIfNotFixed(364);
+        skipIfNotFixed(789);
         Set<Issue> oldIssues = getIssues();
         Issue newIssue = new Issue().withSubject("Test issue").withDescription("New test issue");
         int issueId = createIssue(newIssue);
