@@ -3,4 +3,5 @@ include 'address-book-test'
 include 'mantis-tests'
 include 'soap-sample'
 include 'rest-sample'
+include 'github-sample'
 
