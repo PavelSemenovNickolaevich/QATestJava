@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "addressbook")
-public class ContactData {
+public class ContactData extends Groups {
    @XStreamOmitField
    @Id
    @Column(name = "id")
