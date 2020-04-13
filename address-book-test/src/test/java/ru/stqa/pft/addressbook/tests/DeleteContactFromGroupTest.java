@@ -43,10 +43,10 @@ public class DeleteContactFromGroupTest extends TestBase {
 
     @Test
     public void deleteContactFromGroupTest () {
-        Contacts contacts = applicationManager.db().contacts();
-        Groups groups = applicationManager.db().groups();
-        ContactData contactsSelect = contacts.iterator().next();
-        ContactData contactNow = contacts.iterator().next().setId(contactsSelect.getId());
+        Contacts before = applicationManager.db().contacts();
+     //   Groups groups = applicationManager.db().groups();
+        ContactData contactsSelect = before.iterator().next();
+        ContactData contactNow = before.iterator().next().setId(contactsSelect.getId());
         Groups groupWithContact = contactNow.setId(contactsSelect.getId()).getGroups();
 
         applicationManager.contact().selectGroupToDelete(groupWithContact.iterator().next().getId());
