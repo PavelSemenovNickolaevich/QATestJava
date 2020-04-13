@@ -2,12 +2,12 @@ package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.ManyToAny;
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "addressbook")
@@ -68,7 +68,19 @@ public class ContactData {
    @Expose
    transient private String allPhones;
 
-   public  ContactData() {
+   @ManyToMany(fetch = FetchType.EAGER)
+   @JoinTable(name = "address_in_groups", joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
+   private Set<GroupData> groups = new HashSet<>();
+
+    public Groups getGroups () {
+        return new Groups(groups);
+    }
+
+    public void setGroups (Set<GroupData> groups) {
+        this.groups = groups;
+    }
+
+    public  ContactData() {
         id = Integer.MAX_VALUE;
         firstname = null;
         lastname = null;

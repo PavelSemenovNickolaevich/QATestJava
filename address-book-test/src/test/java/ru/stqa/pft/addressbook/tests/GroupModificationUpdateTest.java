@@ -30,7 +30,7 @@ public class GroupModificationUpdateTest extends TestBase {
         properties = new Properties();
         properties.load(new FileReader(new File(String.format("src/test/resources/local.properties"))));
         properties = new Properties();
-   //     applicationManager.goTo().groupPage();
+        //     applicationManager.goTo().groupPage();
      /*   if (applicationManager.group().list().size() == 0) {
             applicationManager.group()
                     .create(new GroupData()
@@ -44,7 +44,7 @@ public class GroupModificationUpdateTest extends TestBase {
     public void testGroupUpdate () throws IOException {
         properties = new Properties();
         properties.load(new FileReader(new File(String.format("src/test/resources/local.properties"))));
-      //  Groups before = applicationManager.group().all();
+        //  Groups before = applicationManager.group().all();
         Groups before = applicationManager.db().groups();
         GroupData modifiedGroup = before.iterator().next();
         // int index = before.size() - 1;
