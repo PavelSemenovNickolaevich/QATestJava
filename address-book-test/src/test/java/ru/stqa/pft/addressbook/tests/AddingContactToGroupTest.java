@@ -14,6 +14,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class AddingContactToGroupTest extends TestBase {
     private Properties properties;
 
@@ -44,23 +47,47 @@ public class AddingContactToGroupTest extends TestBase {
 
     @Test
     public void testContactToGroupAdding () {
+        ContactData contactSelect = null;
+        GroupData groupSelect = null;
+        ContactData contactsAfter = null;
+  //      int id = contactSelect.getId();
+
         Groups allGroups = applicationManager.db().groups();
         Contacts allContacts = applicationManager.db().contacts();
-        ContactData contact = allContacts.iterator().next();
-        Groups groupsWithContact = contact.getGroups();
-        allGroups.remove(groupsWithContact);
-        Groups allGroupsNew = applicationManager.db().groups();
-        allGroupsNew.remove(groupsWithContact);
-        int id = contact.getId();
+        for (ContactData contact : allContacts) {
+            Groups groupContact  = contact.getGroups();
+            if (groupContact.size() != allGroups.size()) {
+                allGroups.removeAll(groupContact);
+                groupSelect = allGroups.iterator().next();
+                contactSelect = contact;
+                break;
+            }
+        }
 
-        applicationManager.contact().selectContactById(contact.getId());
-        applicationManager.contact().addToGroup(allGroupsNew.iterator().next().getId());
+        if (allContacts.size() == 0 ) {
+            ContactData contact = new ContactData("Pavel111", "First", "Ivanov"
+                            , "skynet", "Moscow 3-builder street 10", "111", "222",
+                         "333", "123@gmail.com", "ivanov@mail.com");
+            applicationManager.contact().createContact(contact);
+            Contacts contactNew = applicationManager.db().contacts();
+            contact.setId(contactNew.stream().mapToInt((g) -> (g).getId()).max().getAsInt());
+            ContactData addContact = contact;
+            ContactData contactNewTwo = allContacts.iterator().next();
+        }
+
+
+       // applicationManager.contact().selectContactById(contactSelect.getId());
+        applicationManager.contact().groupsInPage();
+        applicationManager.contact().selectGroup(contactSelect, groupSelect);
+    //    applicationManager.contact().addToGroup(allGroupsNew.iterator().next().getId());
         Contacts allContactsAfter = applicationManager.db().contacts();
-        ContactData realContact = allContactsAfter.iterator().next().setId(id);
-        Groups groupsWithContactAfter = realContact.setId(id).getGroups();
+        for (ContactData contactAfter: allContactsAfter) {
+            if (contactAfter.getId() == contactSelect.getId()) { contactsAfter  = contactAfter;
 
-        Assert.assertEquals(groupsWithContactAfter.size(), groupsWithContact.size() + 1);
-        Assert.assertEquals(groupsWithContactAfter, groupsWithContact.withAdded(allGroupsNew.iterator().next()));
+            }
+        }
+
+        assertThat(contactSelect.getGroups(), equalTo(contactsAfter.getGroups().without(groupSelect)));
 
 
     }

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.List;
 
@@ -233,6 +234,23 @@ public class ContactHelper extends HelperBase {
         wd.findElement(By.name("group")).click();
         new Select(wd.findElement(By.name("group")));
         wd.findElement(By.cssSelector("option[value='" + id + "']")).click();
+    }
+
+    public void groupsInPage () {
+        new Select(wd.findElement(By.name("group"))).selectByVisibleText("[all]");
+    }
+
+
+    public void selectGroup (ContactData contactSelect, GroupData groupSelect) {
+        selectContactById(contactSelect.getId());
+        String groupId = String.valueOf(groupSelect.getId());
+        new Select(wd.findElement(By.name("to_group"))).selectByValue(groupId);
+        addContactToGroup();
+      //  userCache = null;
+    }
+
+    public void addContactToGroup() {
+        wd.findElement(By.name("add")).click();
     }
 }
 
