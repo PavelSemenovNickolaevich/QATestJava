@@ -1,6 +1,5 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
@@ -12,6 +11,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class DeleteContactFromGroupTest extends TestBase {
     private Properties properties;
@@ -43,22 +45,42 @@ public class DeleteContactFromGroupTest extends TestBase {
 
     @Test
     public void deleteContactFromGroupTest () {
-        Contacts before = applicationManager.db().contacts();
-     //   Groups groups = applicationManager.db().groups();
-        ContactData contactsSelect = before.iterator().next();
-        ContactData contactNow = before.iterator().next().setId(contactsSelect.getId());
-        Groups groupWithContact = contactNow.setId(contactsSelect.getId()).getGroups();
+        ContactData contactSelect ;
+        GroupData groupSelect = null;
+        ContactData contactsAfter = null;
+        //      int id = contactSelect.getId();
 
-        applicationManager.contact().selectGroupToDelete(groupWithContact.iterator().next().getId());
-        applicationManager.contact().selectContactById(contactNow.getId());
+        Groups allGroups = applicationManager.db().groups();
+        Contacts allContacts = applicationManager.db().contacts();
+        contactSelect = allContacts.iterator().next();
+
+        for (ContactData contact : allContacts) {
+            Groups groupContact  = contact.getGroups();
+            if (groupContact.size() > 0 ) {
+                contactSelect = contact;
+                groupSelect = contact.getGroups().iterator().next();
+                break;
+            }
+        }
+
+        if(contactSelect.getGroups().size() == 0) {
+            groupSelect = allGroups.iterator().next();
+            applicationManager.contact().selectGroup(groupSelect);
+        }
+
+
+        applicationManager.contact().selectGroup(groupSelect);
+        applicationManager.contact().selectContactById(contactSelect.getId());
         applicationManager.contact().removeContactFromGroup();
         applicationManager.goTo().goToHome();
-        Contacts after = applicationManager.db().contacts();
-        ContactData nowContact = after.iterator().next().setId(contactsSelect.getId());
-        Groups groupsWithContactNow = nowContact.setId(contactsSelect.getId()).getGroups();
-        Groups removeGroups = applicationManager.db().groups();
-        removeGroups.removeAll(groupsWithContactNow);
-        Assert.assertEquals(groupsWithContactNow, groupWithContact.without(removeGroups.iterator().next()));
+
+        Contacts contactsAfterAll = applicationManager.db().contacts();
+        for (ContactData contactsAfterRemove: contactsAfterAll) {
+            if (contactsAfterRemove.getId() == contactSelect.getId()) {
+                contactsAfter = contactsAfterRemove;
+            }
+        }
+        assertThat(contactsAfter.getGroups(), equalTo(contactsAfter.getGroups().withAdded(groupSelect)));
 
 
 

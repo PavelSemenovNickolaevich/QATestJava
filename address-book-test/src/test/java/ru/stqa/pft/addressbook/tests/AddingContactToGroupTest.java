@@ -1,6 +1,5 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
@@ -9,7 +8,6 @@ import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -64,7 +62,7 @@ public class AddingContactToGroupTest extends TestBase {
             }
         }
 
-        if (allContacts.size() == 0 ) {
+        if (groupSelect == null ) {
             ContactData contact = new ContactData("Pavel111", "First", "Ivanov"
                             , "skynet", "Moscow 3-builder street 10", "111", "222",
                          "333", "123@gmail.com", "ivanov@mail.com");
@@ -76,10 +74,10 @@ public class AddingContactToGroupTest extends TestBase {
         }
 
 
-       // applicationManager.contact().selectContactById(contactSelect.getId());
+        applicationManager.goTo().goToHome();
         applicationManager.contact().groupsInPage();
-        applicationManager.contact().selectGroup(contactSelect, groupSelect);
-    //    applicationManager.contact().addToGroup(allGroupsNew.iterator().next().getId());
+        applicationManager.contact().selectGroup(groupSelect);
+        applicationManager.goTo().goToHome();
         Contacts allContactsAfter = applicationManager.db().contacts();
         for (ContactData contactAfter: allContactsAfter) {
             if (contactAfter.getId() == contactSelect.getId()) { contactsAfter  = contactAfter;

@@ -115,7 +115,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void selectContactById (int id) {
-        wd.findElement(By.cssSelector("input[value= '" + id + "']")).click();
+        wd.findElement(By.cssSelector(String.format("input[value='%s']", id))).click();
     }
 
     public void clickModifyContactById (int id) {
@@ -227,26 +227,31 @@ public class ContactHelper extends HelperBase {
     }
 
     public void removeContactFromGroup () {
-        click(By.name("remove"));
+        wd.findElement(By.name("remove")).click();
     }
 
-    public void selectGroupToDelete (int id) {
+    public void selectGroupToDelete (GroupData id) {
         wd.findElement(By.name("group")).click();
         new Select(wd.findElement(By.name("group")));
         wd.findElement(By.cssSelector("option[value='" + id + "']")).click();
     }
+
+    public void SelectGroup (GroupData group){
+        String groupId = String.valueOf(group.getId());
+        new Select(wd.findElement(By.name("group"))).selectByValue(groupId);
+    }
+
 
     public void groupsInPage () {
         new Select(wd.findElement(By.name("group"))).selectByVisibleText("[all]");
     }
 
 
-    public void selectGroup (ContactData contactSelect, GroupData groupSelect) {
-        selectContactById(contactSelect.getId());
-        String groupId = String.valueOf(groupSelect.getId());
+    public void selectGroup (GroupData group) {
+    //    selectContactById(group.getId());
+        String groupId = String.valueOf(group.getId());
         new Select(wd.findElement(By.name("to_group"))).selectByValue(groupId);
-        addContactToGroup();
-      //  userCache = null;
+     //   addContactToGroup();
     }
 
     public void addContactToGroup() {
