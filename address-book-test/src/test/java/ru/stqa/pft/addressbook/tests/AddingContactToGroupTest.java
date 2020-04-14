@@ -69,14 +69,14 @@ public class AddingContactToGroupTest extends TestBase {
             applicationManager.contact().createContact(contact);
             Contacts contactNew = applicationManager.db().contacts();
             contact.setId(contactNew.stream().mapToInt((g) -> (g).getId()).max().getAsInt());
-            ContactData addContact = contact;
-            ContactData contactNewTwo = allContacts.iterator().next();
+            contactSelect = contact;
+            groupSelect = allGroups.iterator().next();
         }
 
 
         applicationManager.goTo().goToHome();
         applicationManager.contact().groupsInPage();
-        applicationManager.contact().selectGroup(groupSelect);
+        applicationManager.contact().selectGroup(contactSelect,groupSelect);
         applicationManager.goTo().goToHome();
         Contacts allContactsAfter = applicationManager.db().contacts();
         for (ContactData contactAfter: allContactsAfter) {

@@ -65,11 +65,11 @@ public class DeleteContactFromGroupTest extends TestBase {
 
         if(contactSelect.getGroups().size() == 0) {
             groupSelect = allGroups.iterator().next();
-            applicationManager.contact().selectGroup(groupSelect);
+            applicationManager.contact().selectGroup(contactSelect,groupSelect);
         }
 
 
-        applicationManager.contact().selectGroup(groupSelect);
+        applicationManager.contact().selectGroupNew(groupSelect);
         applicationManager.contact().selectContactById(contactSelect.getId());
         applicationManager.contact().removeContactFromGroup();
         applicationManager.goTo().goToHome();
