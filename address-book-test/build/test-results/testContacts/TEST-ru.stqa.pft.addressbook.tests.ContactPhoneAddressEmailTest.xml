@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactPhoneAddressEmailTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-07T19:40:21" hostname="LAPTOP-QKC3I26M" time="1.879">
+  <properties/>
+  <testcase name="testContactPhonesEmailAdress" classname="ru.stqa.pft.addressbook.tests.ContactPhoneAddressEmailTest" time="1.879"/>
+  <system-out><![CDATA[22:40:20.841 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testtestContactPhonesEmailAdress
+22:40:21.285 [Test worker] DEBUG o.h.s.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+22:40:21.293 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+22:40:21.294 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - begin
+22:40:21.326 [Test worker] DEBUG o.h.h.i.QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@57079c57
+22:40:21.363 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - parse() - HQL: from ru.stqa.pft.addressbook.model.ContactData
+22:40:21.371 [Test worker] DEBUG o.h.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+22:40:21.379 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'from'
+          \-[RANGE] Node: 'RANGE'
+             \-[DOT] Node: '.'
+                +-[DOT] Node: '.'
+                |  +-[DOT] Node: '.'
+                |  |  +-[DOT] Node: '.'
+                |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  +-[IDENT] Node: 'ru'
+                |  |  |  |  \-[IDENT] Node: 'stqa'
+                |  |  |  \-[IDENT] Node: 'pft'
+                |  |  \-[IDENT] Node: 'addressbook'
+                |  \-[IDENT] Node: 'model'
+                \-[IDENT] Node: 'ContactData'
+
+22:40:21.402 [Test worker] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+22:40:21.417 [Test worker] DEBUG o.h.h.internal.ast.tree.FromElement - FromClause{level=1} : ru.stqa.pft.addressbook.model.ContactData (<no alias>) -> contactdat0_
+22:40:21.418 [Test worker] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+22:40:21.418 [Test worker] DEBUG o.h.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} addressbook contactdat0_ ) )
+22:40:21.424 [Test worker] DEBUG o.h.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+22:40:21.428 [Test worker] DEBUG o.h.h.i.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity ContactData): [addressbook]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(ru.stqa.pft.addressbook.model.ContactData)
+    |  | referencedTables: null
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+22:40:21.434 [Test worker] DEBUG o.h.h.i.ast.util.JoinProcessor - Using FROM fragment [addressbook contactdat0_]
+22:40:21.434 [Test worker] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+22:40:21.435 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (addressbook)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'contactdat0_.id as id1_0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=addressbook,tableAlias=contactdat0_,origin=null,columns={,className=ru.stqa.pft.addressbook.model.ContactData}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'contactdat0_.address as address2_0_, contactdat0_.company as company3_0_, contactdat0_.email as email4_0_, contactdat0_.email2 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.lastname as lastname7_0_, contactdat0_.middlename as middlena8_0_, contactdat0_.home as home9_0_, contactdat0_.mobile as mobile10_0_, contactdat0_.work as work11_0_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[contactdat0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'addressbook contactdat0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=addressbook,tableAlias=contactdat0_,origin=null,columns={,className=ru.stqa.pft.addressbook.model.ContactData}}
+
+22:40:21.436 [Test worker] DEBUG o.h.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+22:40:21.460 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - HQL: from ru.stqa.pft.addressbook.model.ContactData
+22:40:21.460 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - SQL: select contactdat0_.id as id1_0_, contactdat0_.address as address2_0_, contactdat0_.company as company3_0_, contactdat0_.email as email4_0_, contactdat0_.email2 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.lastname as lastname7_0_, contactdat0_.middlename as middlena8_0_, contactdat0_.home as home9_0_, contactdat0_.mobile as mobile10_0_, contactdat0_.work as work11_0_ from addressbook contactdat0_
+22:40:21.460 [Test worker] DEBUG o.h.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+22:40:21.474 [Test worker] DEBUG org.hibernate.SQL - select contactdat0_.id as id1_0_, contactdat0_.address as address2_0_, contactdat0_.company as company3_0_, contactdat0_.email as email4_0_, contactdat0_.email2 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.lastname as lastname7_0_, contactdat0_.middlename as middlena8_0_, contactdat0_.home as home9_0_, contactdat0_.mobile as mobile10_0_, contactdat0_.work as work11_0_ from addressbook contactdat0_
+Hibernate: select contactdat0_.id as id1_0_, contactdat0_.address as address2_0_, contactdat0_.company as company3_0_, contactdat0_.email as email4_0_, contactdat0_.email2 as email5_0_, contactdat0_.firstname as firstnam6_0_, contactdat0_.lastname as lastname7_0_, contactdat0_.middlename as middlena8_0_, contactdat0_.home as home9_0_, contactdat0_.mobile as mobile10_0_, contactdat0_.work as work11_0_ from addressbook contactdat0_
+22:40:21.491 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 0
+22:40:21.496 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#1]
+22:40:21.504 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 1
+22:40:21.504 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#2]
+22:40:21.504 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 2
+22:40:21.505 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#5]
+22:40:21.505 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 3
+22:40:21.505 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#6]
+22:40:21.505 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 4
+22:40:21.506 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#7]
+22:40:21.506 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 5
+22:40:21.506 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#8]
+22:40:21.506 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 6
+22:40:21.506 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#9]
+22:40:21.507 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 7
+22:40:21.507 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#10]
+22:40:21.507 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 8
+22:40:21.507 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#11]
+22:40:21.508 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 9
+22:40:21.508 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[ru.stqa.pft.addressbook.model.ContactData#12]
+22:40:21.510 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#1]
+22:40:21.513 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = Moscow-city 0
+22:40:21.513 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.513 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = google 0
+22:40:21.514 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.514 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 12@gmail.com 0
+22:40:21.514 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.514 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = qqq@mail.com 0
+22:40:21.515 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.516 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Testovich 0
+22:40:21.516 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.516 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Test 0
+22:40:21.517 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.517 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Testov 0
+22:40:21.517 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.517 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 111111 0
+22:40:21.517 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.517 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 4444444 0
+22:40:21.517 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.518 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 333333333 0
+22:40:21.518 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#1]
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#2]
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = moscow
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = gazprom
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 11@gmail.com
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.520 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = 123@gmail.com
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Vova
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = qwerty
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = ivanov
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 23232
+22:40:21.521 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 213123
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 424214
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#2]
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#5]
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = moscow
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.522 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = gazprom
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 11@gmail.com
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = 123@gmail.com
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Vova
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = qwerty
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = ivanov
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.523 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 23232
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 213123
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 424214
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#5]
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#6]
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = Moscow-city 2
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = google 2
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 12@gmail.com 2
+22:40:21.524 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = qqq@mail.com 2
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Testovich 2
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Test 2
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Testov 2
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 111111 2
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 4444444 2
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 333333333 2
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.525 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#6]
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#7]
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = Moscow-city 0
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = google 0
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 12@gmail.com 0
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = qqq@mail.com 0
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Testovich 0
+22:40:21.526 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Test 0
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Testov 0
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 111111 0
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 4444444 0
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 333333333 0
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#7]
+22:40:21.527 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#8]
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = Moscow-city 1
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = google 1
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 12@gmail.com 1
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = qqq@mail.com 1
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Testovich 1
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Test 1
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.528 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Testov 1
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 111111 1
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 4444444 1
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 333333333 1
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#8]
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#9]
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = moscow
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.529 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = gazprom
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 11@gmail.com
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = 123@gmail.com
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Vova
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = qwerty
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = ivanov
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 23232
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 213123
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.530 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 424214
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#9]
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#10]
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = Moscow-city 0
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = google 0
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 12@gmail.com 0
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = qqq@mail.com 0
+22:40:21.531 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Testovich 0
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Test 0
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Testov 0
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 111111 0
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 4444444 0
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 333333333 0
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#10]
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#11]
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = Moscow-city 1
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.532 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = google 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 12@gmail.com 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = qqq@mail.com 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Testovich 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Test 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Testov 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 111111 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 4444444 1
+22:40:21.533 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 333333333 1
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#11]
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.stqa.pft.addressbook.model.ContactData#12]
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `adress` : value = Moscow-city 2
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`adress`)  - enhanced for lazy-loading? - false
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `company` : value = google 2
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`company`)  - enhanced for lazy-loading? - false
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailOne` : value = 12@gmail.com 2
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailOne`)  - enhanced for lazy-loading? - false
+22:40:21.534 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `emailTwo` : value = qqq@mail.com 2
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`emailTwo`)  - enhanced for lazy-loading? - false
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `firstname` : value = Testovich 2
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`firstname`)  - enhanced for lazy-loading? - false
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `lastname` : value = Test 2
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`lastname`)  - enhanced for lazy-loading? - false
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `middlename` : value = Testov 2
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`middlename`)  - enhanced for lazy-loading? - false
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneHome` : value = 111111 2
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneHome`)  - enhanced for lazy-loading? - false
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneMobile` : value = 4444444 2
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneMobile`)  - enhanced for lazy-loading? - false
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Processing attribute `phoneWork` : value = 333333333 2
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Attribute (`phoneWork`)  - enhanced for lazy-loading? - false
+22:40:21.535 [Test worker] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [ru.stqa.pft.addressbook.model.ContactData#12]
+22:40:21.539 [Test worker] DEBUG o.h.e.t.internal.TransactionImpl - committing
+22:40:21.541 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+22:40:21.544 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+22:40:21.552 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 10 objects
+22:40:21.552 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+22:40:21.553 [Test worker] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+22:40:21.554 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Vova, phoneWork=424214, phoneMobile=213123, emailOne=11@gmail.com, phoneHome=23232, middlename=ivanov, adress=moscow, company=gazprom, id=2, emailTwo=123@gmail.com, lastname=qwerty}
+22:40:21.554 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Testovich 0, phoneWork=333333333 0, phoneMobile=4444444 0, emailOne=12@gmail.com 0, phoneHome=111111 0, middlename=Testov 0, adress=Moscow-city 0, company=google 0, id=1, emailTwo=qqq@mail.com 0, lastname=Test 0}
+22:40:21.554 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Testovich 0, phoneWork=333333333 0, phoneMobile=4444444 0, emailOne=12@gmail.com 0, phoneHome=111111 0, middlename=Testov 0, adress=Moscow-city 0, company=google 0, id=10, emailTwo=qqq@mail.com 0, lastname=Test 0}
+22:40:21.556 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Vova, phoneWork=424214, phoneMobile=213123, emailOne=11@gmail.com, phoneHome=23232, middlename=ivanov, adress=moscow, company=gazprom, id=9, emailTwo=123@gmail.com, lastname=qwerty}
+22:40:21.556 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Testovich 2, phoneWork=333333333 2, phoneMobile=4444444 2, emailOne=12@gmail.com 2, phoneHome=111111 2, middlename=Testov 2, adress=Moscow-city 2, company=google 2, id=12, emailTwo=qqq@mail.com 2, lastname=Test 2}
+22:40:21.556 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Testovich 1, phoneWork=333333333 1, phoneMobile=4444444 1, emailOne=12@gmail.com 1, phoneHome=111111 1, middlename=Testov 1, adress=Moscow-city 1, company=google 1, id=11, emailTwo=qqq@mail.com 1, lastname=Test 1}
+22:40:21.556 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Testovich 2, phoneWork=333333333 2, phoneMobile=4444444 2, emailOne=12@gmail.com 2, phoneHome=111111 2, middlename=Testov 2, adress=Moscow-city 2, company=google 2, id=6, emailTwo=qqq@mail.com 2, lastname=Test 2}
+22:40:21.556 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Vova, phoneWork=424214, phoneMobile=213123, emailOne=11@gmail.com, phoneHome=23232, middlename=ivanov, adress=moscow, company=gazprom, id=5, emailTwo=123@gmail.com, lastname=qwerty}
+22:40:21.556 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Testovich 1, phoneWork=333333333 1, phoneMobile=4444444 1, emailOne=12@gmail.com 1, phoneHome=111111 1, middlename=Testov 1, adress=Moscow-city 1, company=google 1, id=8, emailTwo=qqq@mail.com 1, lastname=Test 1}
+22:40:21.556 [Test worker] DEBUG o.h.internal.util.EntityPrinter - ru.stqa.pft.addressbook.model.ContactData{firstname=Testovich 0, phoneWork=333333333 0, phoneMobile=4444444 0, emailOne=12@gmail.com 0, phoneHome=111111 0, middlename=Testov 0, adress=Moscow-city 0, company=google 0, id=7, emailTwo=qqq@mail.com 0, lastname=Test 0}
+22:40:21.558 [Test worker] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+22:40:21.559 [Test worker] DEBUG o.h.r.j.i.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+22:40:23.453 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testtestContactPhonesEmailAdress
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
