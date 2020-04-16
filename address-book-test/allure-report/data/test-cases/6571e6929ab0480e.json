@@ -1,0 +1,44 @@
+{
+  "uid" : "6571e6929ab0480e",
+  "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 1'}]",
+  "fullName" : "Suite1.testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 1'}]",
+  "historyId" : "9f4f6deb8656e359a2444f2b41fc4905",
+  "time" : {
+    "start" : 1587040670916,
+    "stop" : 1587040672140,
+    "duration" : 1224
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Suite1"
+  }, {
+    "name" : "testClass",
+    "value" : "Suite1"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 1'}]"
+  }, {
+    "name" : "package",
+    "value" : "Suite1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6571e6929ab0480e.json",
+  "parameterValues" : [ ]
+}

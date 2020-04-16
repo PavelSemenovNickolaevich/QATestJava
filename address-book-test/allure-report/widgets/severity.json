@@ -1,0 +1,61 @@
+[ {
+  "uid" : "eb836c4ad871b96d",
+  "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 0'}]",
+  "time" : {
+    "start" : 1587045122133,
+    "stop" : 1587045125735,
+    "duration" : 3602
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d6193aad36deb6a4",
+  "name" : "testGroupUpdate",
+  "time" : {
+    "start" : 1587045128703,
+    "stop" : 1587045130690,
+    "duration" : 1987
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c589704cd4f17608",
+  "name" : "deleteGroup",
+  "time" : {
+    "start" : 1587045131391,
+    "stop" : 1587045131996,
+    "duration" : 605
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b721b148dae8f8a0",
+  "name" : "testGroupCreation",
+  "time" : {
+    "start" : 1587040132674,
+    "stop" : 1587040132674,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "45bfc5eaf2641a04",
+  "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 1'}]",
+  "time" : {
+    "start" : 1587045126324,
+    "stop" : 1587045127514,
+    "duration" : 1190
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c2aae1bcb655507d",
+  "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 2'}]",
+  "time" : {
+    "start" : 1587045127519,
+    "stop" : 1587045128687,
+    "duration" : 1168
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

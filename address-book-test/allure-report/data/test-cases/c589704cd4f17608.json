@@ -1,0 +1,63 @@
+{
+  "uid" : "c589704cd4f17608",
+  "name" : "deleteGroup",
+  "fullName" : "Suite1.deleteGroup",
+  "historyId" : "e956640fa369263b9efe748058a6201a",
+  "time" : {
+    "start" : 1587045131391,
+    "stop" : 1587045131996,
+    "duration" : 605
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Suite1"
+  }, {
+    "name" : "testClass",
+    "value" : "Suite1"
+  }, {
+    "name" : "testMethod",
+    "value" : "deleteGroup"
+  }, {
+    "name" : "package",
+    "value" : "Suite1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3699731c42eedca9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587040678648,
+        "stop" : 1587040680622,
+        "duration" : 1974
+      }
+    }, {
+      "uid" : "eb59f7c7716202c5",
+      "status" : "skipped",
+      "statusDetails" : "ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]",
+      "time" : {
+        "start" : 1587040132681,
+        "stop" : 1587040132681,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c589704cd4f17608.json",
+  "parameterValues" : [ ]
+}

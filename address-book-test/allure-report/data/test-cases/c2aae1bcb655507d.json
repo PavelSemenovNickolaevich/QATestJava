@@ -1,0 +1,54 @@
+{
+  "uid" : "c2aae1bcb655507d",
+  "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 2'}]",
+  "fullName" : "Suite1.testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 2'}]",
+  "historyId" : "6eab9242ba7433caef8840bb8190d7f0",
+  "time" : {
+    "start" : 1587045127519,
+    "stop" : 1587045128687,
+    "duration" : 1168
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Suite1"
+  }, {
+    "name" : "testClass",
+    "value" : "Suite1"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 2'}]"
+  }, {
+    "name" : "package",
+    "value" : "Suite1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1f29a3110c74701d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587040672142,
+        "stop" : 1587040673359,
+        "duration" : 1217
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c2aae1bcb655507d.json",
+  "parameterValues" : [ ]
+}

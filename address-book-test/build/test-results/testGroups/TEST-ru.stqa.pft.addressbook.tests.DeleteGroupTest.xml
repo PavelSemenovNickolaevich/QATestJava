@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.DeleteGroupTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-16T18:48:37" hostname="LAPTOP-QKC3I26M" time="15.61">
+  <properties/>
+  <testcase name="deleteGroup" classname="ru.stqa.pft.addressbook.tests.DeleteGroupTest" time="15.61"/>
+  <system-out><![CDATA[21:48:35.397 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testdeleteGroup
+Hibernate: select groupdata0_.group_id as group_id1_2_, groupdata0_.group_footer as group_fo2_2_, groupdata0_.group_header as group_he3_2_, groupdata0_.group_name as group_na4_2_ from group_list groupdata0_
+Hibernate: select groupdata0_.group_id as group_id1_2_, groupdata0_.group_footer as group_fo2_2_, groupdata0_.group_header as group_he3_2_, groupdata0_.group_name as group_na4_2_ from group_list groupdata0_
+21:48:53.173 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testdeleteGroup
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

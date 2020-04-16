@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 16 16:52:06 MSK 2020","Thu Apr 16 16:52:07 MSK 2020","1190","","Suite1","","Suite1","testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 1'}]","testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 1'}]",""
+"passed","Thu Apr 16 16:52:07 MSK 2020","Thu Apr 16 16:52:08 MSK 2020","1168","","Suite1","","Suite1","testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 2'}]","testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 2'}]",""
+"skipped","Thu Apr 16 15:28:52 MSK 2020","Thu Apr 16 15:28:52 MSK 2020","0","","Suite1","","Suite1","testGroupCreation","testGroupCreation",""
+"passed","Thu Apr 16 16:52:11 MSK 2020","Thu Apr 16 16:52:11 MSK 2020","605","","Suite1","","Suite1","deleteGroup","deleteGroup",""
+"passed","Thu Apr 16 16:52:08 MSK 2020","Thu Apr 16 16:52:10 MSK 2020","1987","","Suite1","","Suite1","testGroupUpdate","testGroupUpdate",""
+"passed","Thu Apr 16 16:52:02 MSK 2020","Thu Apr 16 16:52:05 MSK 2020","3602","","Suite1","","Suite1","testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 0'}]","testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 0'}]",""

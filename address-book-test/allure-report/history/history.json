@@ -1,0 +1,117 @@
+{
+  "e956640fa369263b9efe748058a6201a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c589704cd4f17608",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045131391,
+        "stop" : 1587045131996,
+        "duration" : 605
+      }
+    } ]
+  },
+  "6eab9242ba7433caef8840bb8190d7f0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c2aae1bcb655507d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045127519,
+        "stop" : 1587045128687,
+        "duration" : 1168
+      }
+    } ]
+  },
+  "9f4f6deb8656e359a2444f2b41fc4905" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "45bfc5eaf2641a04",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045126324,
+        "stop" : 1587045127514,
+        "duration" : 1190
+      }
+    } ]
+  },
+  "2054f052e0ee9d9f45353f9480589a1b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "eb836c4ad871b96d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045122133,
+        "stop" : 1587045125735,
+        "duration" : 3602
+      }
+    } ]
+  },
+  "33abc4bfa4854aaf2371158cbe4af23b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d6193aad36deb6a4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045128703,
+        "stop" : 1587045130690,
+        "duration" : 1987
+      }
+    } ]
+  },
+  "107ee09a06dd301a72aa0150d1988d12" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b721b148dae8f8a0",
+      "status" : "skipped",
+      "statusDetails" : "ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]",
+      "time" : {
+        "start" : 1587040132674,
+        "stop" : 1587040132674,
+        "duration" : 0
+      }
+    } ]
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.soap.GeoIPServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-08T20:10:35" hostname="LAPTOP-QKC3I26M" time="9.631">
+  <properties/>
+  <testcase name="testMyIP" classname="ru.stqa.pft.soap.GeoIPServiceTests" time="9.631"/>
+  <system-out><![CDATA[<GeoIP><Country>RU</Country><State>48</State></GeoIP>
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

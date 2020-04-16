@@ -1,0 +1,44 @@
+{
+  "uid" : "8fd88e4d35e8a4c8",
+  "name" : "testGroupUpdate",
+  "fullName" : "Suite1.testGroupUpdate",
+  "historyId" : "33abc4bfa4854aaf2371158cbe4af23b",
+  "time" : {
+    "start" : 1587040673412,
+    "stop" : 1587040676750,
+    "duration" : 3338
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Suite1"
+  }, {
+    "name" : "testClass",
+    "value" : "Suite1"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGroupUpdate"
+  }, {
+    "name" : "package",
+    "value" : "Suite1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8fd88e4d35e8a4c8.json",
+  "parameterValues" : [ ]
+}

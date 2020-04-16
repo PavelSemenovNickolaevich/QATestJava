@@ -1,0 +1,87 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Suite1",
+    "children" : [ {
+      "name" : "testGroupCreation",
+      "uid" : "b721b148dae8f8a0",
+      "parentUid" : "82d5bbc178135984a9be49080f05c781",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1587040132674,
+        "stop" : 1587040132674,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 0'}]",
+      "uid" : "eb836c4ad871b96d",
+      "parentUid" : "82d5bbc178135984a9be49080f05c781",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045122133,
+        "stop" : 1587045125735,
+        "duration" : 3602
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 1'}]",
+      "uid" : "45bfc5eaf2641a04",
+      "parentUid" : "82d5bbc178135984a9be49080f05c781",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045126324,
+        "stop" : 1587045127514,
+        "duration" : 1190
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testGroupCreation[GroupData{id='2147483647', name='testtrrtutr 2'}]",
+      "uid" : "c2aae1bcb655507d",
+      "parentUid" : "82d5bbc178135984a9be49080f05c781",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045127519,
+        "stop" : 1587045128687,
+        "duration" : 1168
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testGroupUpdate",
+      "uid" : "d6193aad36deb6a4",
+      "parentUid" : "82d5bbc178135984a9be49080f05c781",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045128703,
+        "stop" : 1587045130690,
+        "duration" : 1987
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "deleteGroup",
+      "uid" : "c589704cd4f17608",
+      "parentUid" : "82d5bbc178135984a9be49080f05c781",
+      "status" : "passed",
+      "time" : {
+        "start" : 1587045131391,
+        "stop" : 1587045131996,
+        "duration" : 605
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "82d5bbc178135984a9be49080f05c781"
+  } ]
+}
