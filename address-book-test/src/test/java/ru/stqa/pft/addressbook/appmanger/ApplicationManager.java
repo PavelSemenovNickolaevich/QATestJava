@@ -1,8 +1,6 @@
 package ru.stqa.pft.addressbook.appmanger;
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
@@ -12,6 +10,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -77,4 +76,7 @@ public class ApplicationManager {
         return DbHelper;
     }
 
+    public byte[] takeScreenshot() {
+       return ((TakesScreenshot)wd).getScreenshotAs(OutputType.BYTES);
+    }
 }
