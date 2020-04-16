@@ -1,0 +1,10 @@
+10729 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testtestGroupCreation
+12996 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testtestGroupCreation
+12998 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testtestGroupCreation
+14250 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testtestGroupCreation
+14252 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testtestGroupCreation
+15442 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testtestGroupCreation
+15448 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testtestGroupUpdate
+16963 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testtestGroupUpdate
+16965 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Start testdeleteGroup
+18569 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop testdeleteGroup
